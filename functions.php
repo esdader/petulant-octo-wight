@@ -1,4 +1,63 @@
-<?php 
+<?php
+
+/**
+ * Enqueue styles and scripts
+ */
+
+function starter_theme_scripts() {
+	
+	// main stylesheet
+	wp_enqueue_style( 
+		'main', 
+		get_template_directory_uri() . '/css/main.css'
+	);
+	
+	// modernizr
+	wp_enqueue_script(
+		'modernizr', 
+		get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js',
+		array(), // dependencies
+		false,   // version
+		false    // in footer
+	);
+
+	// special stuff for jquery
+	wp_deregister_script('jquery');
+	wp_register_script(
+		'jquery',
+		get_template_directory_uri() . '/js/vendor/jquery-1.10.1.min.js',
+		false,
+		true
+	);
+	wp_enqueue_script( 'jquery' );
+
+	// plugins
+	wp_enqueue_scripts(
+		'plugins',
+		get_template_directory_uri() . '/js/plugins.js',
+		array(
+				'jquery'
+			),
+		false,
+		true
+
+	);
+
+	// main javascript
+	wp_enqueue_scripts(
+		'main',
+		get_template_directory_uri() . '/js/main.js',
+		array(
+				'jquery',
+				'plugins'
+			),
+		false,
+		true
+
+	);
+}
+
+if ( !is_admin() ) add_action( 'wp_enqueue_scripts', 'starter_theme_scripts' ) );
 
 /**
  * Add support for menus
