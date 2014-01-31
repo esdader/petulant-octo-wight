@@ -32,7 +32,7 @@ function starter_theme_scripts() {
 	wp_enqueue_script( 'jquery' );
 
 	// plugins
-	wp_enqueue_scripts(
+	wp_enqueue_script(
 		'plugins',
 		get_template_directory_uri() . '/js/plugins.js',
 		array(
@@ -44,7 +44,7 @@ function starter_theme_scripts() {
 	);
 
 	// main javascript
-	wp_enqueue_scripts(
+	wp_enqueue_script(
 		'main',
 		get_template_directory_uri() . '/js/main.js',
 		array(
