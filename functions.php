@@ -26,6 +26,7 @@ function starter_theme_scripts() {
 	wp_register_script(
 		'jquery',
 		get_template_directory_uri() . '/js/vendor/jquery-1.10.1.min.js',
+        array(),
 		false,
 		true
 	);
