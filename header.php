@@ -10,6 +10,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     
-    <?php wp_header(); ?>
+    <?php wp_head(); ?>
 </head>
 <body>
