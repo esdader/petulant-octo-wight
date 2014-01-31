@@ -57,7 +57,7 @@ function starter_theme_scripts() {
 	);
 }
 
-if ( !is_admin() ) add_action( 'wp_enqueue_scripts', 'starter_theme_scripts' ) );
+if ( !is_admin() ) add_action( 'wp_enqueue_scripts', 'starter_theme_scripts' );
 
 /**
  * Add support for menus
