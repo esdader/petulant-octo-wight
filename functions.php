@@ -25,7 +25,7 @@ function starter_theme_scripts() {
 	wp_deregister_script('jquery');
 	wp_register_script(
 		'jquery',
-		get_template_directory_uri() . '/js/vendor/jquery-1.11.0.min.js',
+		get_template_directory_uri() . '/js/vendor/jquery-1.11.1.min.js',
         array(),
 		false,
 		true
