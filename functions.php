@@ -15,7 +15,7 @@ function starter_theme_scripts() {
 	// modernizr
 	wp_enqueue_script(
 		'modernizr', 
-		get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js',
+		get_template_directory_uri() . '/js/vendor/modernizr-2.8.2.min.js',
 		array(), // dependencies
 		false,   // version
 		false    // in footer
