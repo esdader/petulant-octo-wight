@@ -2,15 +2,12 @@
    Print styles
    ========================================================================== */
 
-// print media query
-
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-
+    /* Style adjustments for high resolution devices */
 }
-
 
 @media print {
     * {
@@ -34,12 +31,12 @@
     }
 
     /*
-     * Don't show links for images, or javascript/internal links
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
      */
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
         content: "";
     }
 
@@ -60,10 +57,6 @@
 
     img {
         max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
     }
 
     p,

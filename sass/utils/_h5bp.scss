@@ -1,16 +1,11 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
 /* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   Base styles: opinionated defaults
    ========================================================================== */
 
-html,
-button,
-input,
-select,
-textarea {
+html {
     color: #222;
-}
-
-body {
     font-size: 1em;
     line-height: 1.4;
 }
@@ -34,7 +29,12 @@ hr {
     padding: 0;
 }
 
-img {
+
+audio,
+canvas,
+img,
+svg,
+video {
     vertical-align: middle;
 }
 
